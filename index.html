@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sairaj | Portfolio</title>
+
+    <title>Charan | Portfolio</title>
 
     <style>
         * {
@@ -15,12 +16,13 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: #fff;
-            background: #07111f;
+            color: #ffffff;
+            background: #080808;
             overflow-x: hidden;
         }
 
-        /* ===== Animated Background ===== */
+        /* ================= BACKGROUND ================= */
+
         body::before,
         body::after {
             content: "";
@@ -28,39 +30,44 @@
             width: 450px;
             height: 450px;
             border-radius: 50%;
-            filter: blur(100px);
+            filter: blur(120px);
             z-index: -2;
-            opacity: 0.5;
+            opacity: 0.45;
         }
 
         body::before {
-            background: #6c63ff;
-            top: -150px;
-            left: -100px;
+            background: #ff1a1a;
+            top: -180px;
+            left: -150px;
         }
 
         body::after {
-            background: #00d4ff;
-            right: -150px;
-            bottom: -150px;
+            background: #b30000;
+            right: -180px;
+            bottom: -180px;
         }
 
-        /* ===== Navigation ===== */
+        /* ================= NAVBAR ================= */
+
         nav {
             position: fixed;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
+
             width: 90%;
             max-width: 1100px;
+
             padding: 15px 25px;
 
             background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
 
             border-radius: 20px;
+
             z-index: 1000;
 
             display: flex;
@@ -74,7 +81,7 @@
         }
 
         .logo span {
-            color: #00d4ff;
+            color: #ff1a1a;
         }
 
         nav ul {
@@ -84,35 +91,44 @@
         }
 
         nav a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             font-size: 14px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #00d4ff;
+            color: #ff1a1a;
         }
 
-        /* ===== General ===== */
+        /* ================= GENERAL ================= */
+
         section {
             min-height: 100vh;
             padding: 120px 8% 70px;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            background: rgba(255, 255, 255, 0.07);
+
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.5),
+                inset 0 0 20px rgba(255, 255, 255, 0.02);
+
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+
             border-radius: 25px;
         }
 
-        /* ===== Hero ===== */
+        /* ================= HERO ================= */
+
         .hero {
             align-items: center;
             text-align: center;
@@ -121,18 +137,31 @@
         .profile {
             width: 150px;
             height: 150px;
+
             border-radius: 50%;
+
             margin-bottom: 25px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            font-size: 55px;
+            font-size: 60px;
             font-weight: bold;
 
-            background: linear-gradient(135deg, #6c63ff, #00d4ff);
-            box-shadow: 0 0 50px rgba(0, 212, 255, 0.35);
+            color: #ffffff;
+
+            background: linear-gradient(
+                135deg,
+                #ff0000,
+                #8b0000
+            );
+
+            border: 3px solid rgba(255, 255, 255, 0.7);
+
+            box-shadow:
+                0 0 30px rgba(255, 0, 0, 0.5),
+                0 0 80px rgba(255, 0, 0, 0.2);
         }
 
         .hero h1 {
@@ -141,51 +170,71 @@
         }
 
         .hero h1 span {
-            color: #00d4ff;
+            color: #ff1a1a;
         }
 
         .hero h2 {
             font-size: 22px;
             font-weight: normal;
-            color: #b9c4d0;
+            color: #dddddd;
             margin-bottom: 20px;
         }
 
         .hero p {
             max-width: 650px;
+
             line-height: 1.7;
-            color: #b9c4d0;
+
+            color: #bbbbbb;
+
             margin-bottom: 30px;
         }
+
+        /* ================= BUTTONS ================= */
 
         .buttons {
             display: flex;
             gap: 15px;
+
             flex-wrap: wrap;
             justify-content: center;
         }
 
         .btn {
             padding: 13px 25px;
+
             border-radius: 30px;
+
             text-decoration: none;
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.08);
+
+            color: #ffffff;
+
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            background: rgba(255, 255, 255, 0.08);
+
             transition: 0.3s;
         }
 
         .btn.primary {
-            background: linear-gradient(135deg, #6c63ff, #00d4ff);
+            background: linear-gradient(
+                135deg,
+                #ff0000,
+                #a00000
+            );
+
             border: none;
         }
 
         .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 30px rgba(255, 0, 0, 0.35);
         }
 
-        /* ===== Section Title ===== */
+        /* ================= SECTION TITLE ================= */
+
         .section-title {
             text-align: center;
             margin-bottom: 45px;
@@ -197,45 +246,68 @@
         }
 
         .section-title span {
-            color: #00d4ff;
+            color: #ff1a1a;
         }
 
         .section-title p {
-            color: #9da9b6;
+            color: #999999;
         }
 
-        /* ===== About ===== */
+        /* ================= ABOUT ================= */
+
         .about-card {
             max-width: 900px;
+
             margin: auto;
+
             padding: 40px;
+
             line-height: 1.8;
-            color: #c8d1db;
+
+            color: #cccccc;
         }
 
-        /* ===== Skills ===== */
+        .about-card strong {
+            color: #ffffff;
+        }
+
+        /* ================= SKILLS ================= */
+
         .skills-container {
             max-width: 1000px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(150px, 1fr));
+
             gap: 20px;
+
             width: 100%;
         }
 
         .skill {
             padding: 30px 20px;
+
             text-align: center;
+
             transition: 0.3s;
         }
 
         .skill:hover {
             transform: translateY(-8px);
-            background: rgba(255,255,255,0.13);
+
+            border-color: rgba(255, 0, 0, 0.5);
+
+            box-shadow:
+                0 15px 40px rgba(255, 0, 0, 0.15);
         }
 
         .skill .icon {
             font-size: 40px;
+
             margin-bottom: 15px;
         }
 
@@ -245,31 +317,47 @@
 
         .skill p {
             font-size: 13px;
-            color: #9da9b6;
+
+            color: #999999;
         }
 
-        /* ===== Projects ===== */
+        /* ================= PROJECTS ================= */
+
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
             gap: 25px;
+
             max-width: 1100px;
+
             margin: auto;
+
             width: 100%;
         }
 
         .project {
             padding: 30px;
+
             transition: 0.3s;
         }
 
         .project:hover {
             transform: translateY(-10px);
+
+            border-color: rgba(255, 0, 0, 0.5);
+
+            box-shadow:
+                0 20px 50px rgba(255, 0, 0, 0.15);
         }
 
         .project-icon {
             height: 150px;
+
             border-radius: 18px;
+
             margin-bottom: 20px;
 
             display: flex;
@@ -277,11 +365,14 @@
             justify-content: center;
 
             font-size: 55px;
+
             background: linear-gradient(
                 135deg,
-                rgba(108, 99, 255, 0.5),
-                rgba(0, 212, 255, 0.3)
+                rgba(255, 0, 0, 0.5),
+                rgba(100, 0, 0, 0.3)
             );
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .project h3 {
@@ -289,78 +380,115 @@
         }
 
         .project p {
-            color: #9da9b6;
+            color: #999999;
+
             line-height: 1.6;
+
             margin-bottom: 20px;
         }
 
         .tags {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 8px;
         }
 
         .tag {
             padding: 6px 12px;
+
             border-radius: 20px;
+
             font-size: 12px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.1);
+
+            background: rgba(255, 255, 255, 0.07);
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
-        /* ===== Contact ===== */
+        /* ================= CONTACT ================= */
+
         .contact-box {
             max-width: 700px;
+
             margin: auto;
+
             padding: 45px;
+
             text-align: center;
         }
 
         .contact-box p {
-            color: #aeb9c5;
+            color: #aaaaaa;
+
             line-height: 1.7;
+
             margin: 15px 0 25px;
         }
 
         .socials {
             display: flex;
+
             justify-content: center;
+
             gap: 15px;
+
             margin-top: 25px;
         }
 
         .socials a {
             width: 45px;
             height: 45px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             border-radius: 50%;
-            color: #fff;
+
+            color: #ffffff;
+
             text-decoration: none;
 
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
 
             transition: 0.3s;
         }
 
         .socials a:hover {
-            background: #00d4ff;
-            color: #07111f;
+            background: #ff0000;
+
+            color: #ffffff;
+
             transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(255, 0, 0, 0.35);
         }
 
-        /* ===== Footer ===== */
+        /* ================= FOOTER ================= */
+
         footer {
             text-align: center;
+
             padding: 30px;
-            color: #74808d;
-            border-top: 1px solid rgba(255,255,255,0.08);
+
+            color: #666666;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.08);
         }
 
-        /* ===== Mobile ===== */
+        footer span {
+            color: #ff1a1a;
+        }
+
+        /* ================= MOBILE ================= */
+
         @media (max-width: 700px) {
 
             nav {
@@ -396,6 +524,12 @@
             .section-title h2 {
                 font-size: 34px;
             }
+
+            .profile {
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
+            }
         }
     </style>
 </head>
@@ -403,8 +537,12 @@
 <body>
 
     <!-- ================= NAVIGATION ================= -->
+
     <nav>
-        <div class="logo">Sai<span>.</span></div>
+
+        <div class="logo">
+            Charan<span>.</span>
+        </div>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -413,19 +551,25 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
 
 
     <!-- ================= HERO ================= -->
+
     <section id="home" class="hero">
 
         <div class="profile">
-            S
+            C
         </div>
 
-        <h1>Hello, I'm <span>Sairaj</span></h1>
+        <h1>
+            Hello, I'm <span>Charan</span>
+        </h1>
 
-        <h2>Web Developer • Designer • Programmer</h2>
+        <h2>
+            Web Developer • Designer • Programmer
+        </h2>
 
         <p>
             I create modern, responsive and visually appealing websites
@@ -433,6 +577,7 @@
         </p>
 
         <div class="buttons">
+
             <a href="#projects" class="btn primary">
                 View My Work
             </a>
@@ -440,24 +585,33 @@
             <a href="#contact" class="btn">
                 Contact Me
             </a>
+
         </div>
 
     </section>
 
 
     <!-- ================= ABOUT ================= -->
+
     <section id="about">
 
         <div class="section-title">
-            <h2>About <span>Me</span></h2>
-            <p>A little bit about myself</p>
+
+            <h2>
+                About <span>Me</span>
+            </h2>
+
+            <p>
+                A little bit about myself
+            </p>
+
         </div>
 
         <div class="glass about-card">
 
             <p>
-                Hi! I'm <strong>Sairaj</strong>, a passionate developer who
-                enjoys building websites and applications.
+                Hi! I'm <strong>Charan</strong>, a passionate developer
+                who enjoys building websites and applications.
             </p>
 
             <br>
@@ -474,11 +628,19 @@
 
 
     <!-- ================= SKILLS ================= -->
+
     <section id="skills">
 
         <div class="section-title">
-            <h2>My <span>Skills</span></h2>
-            <p>Technologies I work with</p>
+
+            <h2>
+                My <span>Skills</span>
+            </h2>
+
+            <p>
+                Technologies I work with
+            </p>
+
         </div>
 
         <div class="skills-container">
@@ -486,19 +648,19 @@
             <div class="glass skill">
                 <div class="icon">🌐</div>
                 <h3>HTML</h3>
-                <p>Semantic & modern web structure</p>
+                <p>Modern web structure</p>
             </div>
 
             <div class="glass skill">
                 <div class="icon">🎨</div>
                 <h3>CSS</h3>
-                <p>Responsive & beautiful UI</p>
+                <p>Responsive UI design</p>
             </div>
 
             <div class="glass skill">
                 <div class="icon">⚡</div>
                 <h3>JavaScript</h3>
-                <p>Interactive web experiences</p>
+                <p>Interactive websites</p>
             </div>
 
             <div class="glass skill">
@@ -510,13 +672,13 @@
             <div class="glass skill">
                 <div class="icon">💾</div>
                 <h3>Database</h3>
-                <p>Data management & storage</p>
+                <p>Data management</p>
             </div>
 
             <div class="glass skill">
                 <div class="icon">📱</div>
                 <h3>Responsive</h3>
-                <p>Mobile-friendly websites</p>
+                <p>Mobile-friendly design</p>
             </div>
 
         </div>
@@ -525,11 +687,19 @@
 
 
     <!-- ================= PROJECTS ================= -->
+
     <section id="projects">
 
         <div class="section-title">
-            <h2>My <span>Projects</span></h2>
-            <p>Some things I've built</p>
+
+            <h2>
+                My <span>Projects</span>
+            </h2>
+
+            <p>
+                Some things I've built
+            </p>
+
         </div>
 
         <div class="projects">
@@ -540,7 +710,9 @@
                     💻
                 </div>
 
-                <h3>Portfolio Website</h3>
+                <h3>
+                    Portfolio Website
+                </h3>
 
                 <p>
                     A modern glassmorphism portfolio website
@@ -562,7 +734,9 @@
                     🛒
                 </div>
 
-                <h3>E-Commerce Website</h3>
+                <h3>
+                    E-Commerce Website
+                </h3>
 
                 <p>
                     A responsive online shopping interface
@@ -572,7 +746,7 @@
                 <div class="tags">
                     <span class="tag">HTML</span>
                     <span class="tag">CSS</span>
-                    <span class="tag">JS</span>
+                    <span class="tag">JavaScript</span>
                 </div>
 
             </div>
@@ -584,7 +758,9 @@
                     🚀
                 </div>
 
-                <h3>Web Application</h3>
+                <h3>
+                    Web Application
+                </h3>
 
                 <p>
                     An interactive web application focused on
@@ -605,16 +781,26 @@
 
 
     <!-- ================= CONTACT ================= -->
+
     <section id="contact">
 
         <div class="section-title">
-            <h2>Get In <span>Touch</span></h2>
-            <p>Let's build something amazing together</p>
+
+            <h2>
+                Get In <span>Touch</span>
+            </h2>
+
+            <p>
+                Let's build something amazing together
+            </p>
+
         </div>
 
         <div class="glass contact-box">
 
-            <h2>Have a project in mind?</h2>
+            <h2>
+                Have a project in mind?
+            </h2>
 
             <p>
                 Feel free to contact me if you want to collaborate,
@@ -630,7 +816,9 @@
             <div class="socials">
 
                 <a href="#" title="GitHub">GH</a>
+
                 <a href="#" title="LinkedIn">in</a>
+
                 <a href="#" title="Instagram">IG</a>
 
             </div>
@@ -641,8 +829,11 @@
 
 
     <!-- ================= FOOTER ================= -->
+
     <footer>
-        © 2026 Charan. All Rights Reserved.
+
+        © 2026 <span>Charan</span>. All Rights Reserved.
+
     </footer>
 
 </body>
